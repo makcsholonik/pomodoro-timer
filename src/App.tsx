@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { FC } from 'react';
 import './App.css';
 import { Timer } from './components/Timer';
 
-export const App : React.FC = () => {
+export const App : FC = () => {
 	return (
 		<main>
 			<Timer/>
