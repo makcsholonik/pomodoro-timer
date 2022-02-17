@@ -2,6 +2,7 @@ import React, { FC } from 'react';
 import { buildStyles, CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { PlayButton } from './PlayButton';
+import { PauseButton } from './PauseButton';
 
 const red = '#f54e4e';
 const green = '#4aec8c';
@@ -21,7 +22,10 @@ export const Timer : FC = () => {
 				} ) }
 			/>
 			{/*@ts-ignore*/ }
-			<PlayButton style={ { marginTop : '20px' } }/>
+			<div style={ { marginTop : '20px' } }>
+				<PlayButton/>
+				<PauseButton/>
+			</div>
 		</div>
 	);
 };
