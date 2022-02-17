@@ -1,6 +1,14 @@
 import React, { FC } from 'react';
 
-export const SettingsButton : FC = () => {
+// interface SettingsButtonProps {
+// 	showSettings: boolean
+// 	showSettingsHandler: (value: boolean) => void
+// }
+
+export const SettingsButton : FC = (props) => {
+
+	// const {showSettings, showSettingsHandler} = props
+
 	return (
 		<button className={'settings'}>
 			<svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">

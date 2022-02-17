@@ -9,7 +9,14 @@ const red = '#f54e4e';
 const green = '#4aec8c';
 const percentage = 66;
 
-export const Timer : FC = () => {
+// interface TimerProps {
+// 	showSettings: boolean
+// 	showSettingsHandler : ( value : boolean ) => void;
+// }
+
+export const Timer : FC = ( props ) => {
+
+	// const { showSettings, showSettingsHandler } = props;
 
 	return (
 		<div>
@@ -27,7 +34,7 @@ export const Timer : FC = () => {
 				<PauseButton/>
 			</div>
 			<div>
-				<SettingsButton/>
+				<SettingsButton />
 			</div>
 		</div>
 	);
