@@ -1,13 +1,6 @@
 import React, { FC } from 'react';
 
-// interface SettingsButtonProps {
-// 	showSettings: boolean
-// 	showSettingsHandler: (value: boolean) => void
-// }
-
 export const SettingsButton : FC = (props) => {
-
-	// const {showSettings, showSettingsHandler} = props
 
 	return (
 		<button className={'settings'}>
