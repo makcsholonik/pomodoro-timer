@@ -17,6 +17,7 @@ export const App : FC = () => {
 		setBreakMin ( newValue );
 	};
 
+	const settingsMode = () => setShowSettings(true)
 
 	return (
 		<main>
@@ -28,7 +29,7 @@ export const App : FC = () => {
 					changeBreakMinutes={ changeBreakMinutes }
 				/>
 				: <Timer
-					setShowSettings={setShowSettings}
+					settingsMode={settingsMode}
 				/> }
 		</main>
 	);

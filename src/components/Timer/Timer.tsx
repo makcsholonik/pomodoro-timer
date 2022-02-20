@@ -10,12 +10,12 @@ const green = '#4aec8c';
 const percentage = 66;
 
 type TimerPropsType = {
-	setShowSettings: () => void
+	settingsMode: () => void
 }
 
 export const Timer : FC<TimerPropsType> = ( props ) => {
 
-	const {setShowSettings} = props
+	const {settingsMode} = props
 
 	return (
 		<div>
@@ -33,7 +33,7 @@ export const Timer : FC<TimerPropsType> = ( props ) => {
 				<PauseButton/>
 			</div>
 			<div>
-				<SettingsButton setShowSettings={setShowSettings}/>
+				<SettingsButton settingsMode={settingsMode}/>
 			</div>
 		</div>
 	);
