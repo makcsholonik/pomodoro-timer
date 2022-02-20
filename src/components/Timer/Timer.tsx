@@ -9,7 +9,13 @@ const red = '#f54e4e';
 const green = '#4aec8c';
 const percentage = 66;
 
-export const Timer : FC = ( props ) => {
+type TimerPropsType = {
+	setShowSettings: () => void
+}
+
+export const Timer : FC<TimerPropsType> = ( props ) => {
+
+	const {setShowSettings} = props
 
 	return (
 		<div>
@@ -27,7 +33,7 @@ export const Timer : FC = ( props ) => {
 				<PauseButton/>
 			</div>
 			<div>
-				<SettingsButton />
+				<SettingsButton setShowSettings={setShowSettings}/>
 			</div>
 		</div>
 	);

@@ -1,15 +1,25 @@
 import React, { FC } from 'react';
 import ReactSlider from 'react-slider';
+import { BackButton } from '../BackButton/BackButton';
 
 interface SettingsProps {
 	workMin : number;
 	breakMin : number;
+	changeWorkMinutes : ( newValue : number ) => void;
+	changeBreakMinutes : ( newValue : number ) => void;
 }
 
 export const Settings : FC<SettingsProps> = ( props ) => {
 
-	const { workMin, breakMin } = props;
+	const {
+		workMin,
+		breakMin,
+		changeWorkMinutes,
+		changeBreakMinutes
+	} = props;
 
+	const changeWM = ( e : number ) => {changeWorkMinutes ( e ); };
+	const changeBM = ( e : number ) => {changeBreakMinutes ( e ); };
 
 	return (
 		<div style={ { textAlign : 'left' } }>
@@ -19,7 +29,7 @@ export const Settings : FC<SettingsProps> = ( props ) => {
 				thumbClassName={ 'thumb' }
 				trackClassName={ 'track' }
 				value={ workMin }
-				onChange={ ( e ) => {console.log ( e );} }
+				onChange={ changeWM }
 				min={ 1 }
 				max={ 60 }
 			/>
@@ -29,10 +39,13 @@ export const Settings : FC<SettingsProps> = ( props ) => {
 				thumbClassName={ 'thumb' }
 				trackClassName={ 'track' }
 				value={ breakMin }
-				onChange={ ( e ) => {console.log ( e );} }
+				onChange={ changeBM }
 				min={ 1 }
 				max={ 25 }
 			/>
+			<div style={ { textAlign : 'center', marginTop : '20px' } }>
+				<BackButton/>
+			</div>
 		</div>
 	);
 };
