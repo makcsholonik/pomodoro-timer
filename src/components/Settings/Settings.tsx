@@ -7,6 +7,7 @@ interface SettingsProps {
 	breakMin : number;
 	changeWorkMinutes : ( newValue : number ) => void;
 	changeBreakMinutes : ( newValue : number ) => void;
+	timerMode: () => void
 }
 
 export const Settings : FC<SettingsProps> = ( props ) => {
@@ -15,7 +16,8 @@ export const Settings : FC<SettingsProps> = ( props ) => {
 		workMin,
 		breakMin,
 		changeWorkMinutes,
-		changeBreakMinutes
+		changeBreakMinutes,
+		timerMode
 	} = props;
 
 	const changeWM = ( e : number ) => {changeWorkMinutes ( e ); };
@@ -44,7 +46,7 @@ export const Settings : FC<SettingsProps> = ( props ) => {
 				max={ 25 }
 			/>
 			<div style={ { textAlign : 'center', marginTop : '20px' } }>
-				<BackButton/>
+				<BackButton timerMode={timerMode}/>
 			</div>
 		</div>
 	);

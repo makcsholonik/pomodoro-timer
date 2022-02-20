@@ -18,6 +18,7 @@ export const App : FC = () => {
 	};
 
 	const settingsMode = () => setShowSettings(true)
+	const timerMode = () => setShowSettings(false)
 
 	return (
 		<main>
@@ -27,6 +28,7 @@ export const App : FC = () => {
 					breakMin={ breakMin }
 					changeWorkMinutes={ changeWorkMinutes }
 					changeBreakMinutes={ changeBreakMinutes }
+					timerMode={timerMode}
 				/>
 				: <Timer
 					settingsMode={settingsMode}
